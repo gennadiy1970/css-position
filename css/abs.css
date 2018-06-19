@@ -1,0 +1,144 @@
+.box-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.box0 {
+    border: 2px solid white;
+    --w: 768px;
+    box-sizing: border-box;
+    height: var(--w);
+    width: var(--w);
+    margin: auto;
+    padding-top: 84px;
+    /* padding-left: 84px; */
+    position: static;
+    pointer-events: none;
+}
+
+.box1 {
+    border: 2px solid #080;
+    --w: 600px;
+    box-sizing: border-box;
+    height: var(--w);
+    width: var(--w);
+    margin: auto;
+    padding-top: 75px;
+    position: static;
+    pointer-events: none;
+}
+
+.box2 {
+    border: 2px solid orangered;
+    --w: 450px;
+    box-sizing: border-box;
+    height: var(--w);
+    width: var(--w);
+    margin: auto;
+    position: static;
+    pointer-events: none;
+}
+
+h6 {
+    margin: auto;
+    padding: 0;
+    font-size: 16px;
+}
+
+.selected {
+    --w: 150px;
+    margin: 0;
+    border-color: red;
+    background: #800;
+    width: var(--w);
+    height: var(--w);
+    position: absolute;
+    line-height: var(--w);
+    z-index: 50;
+    /* bottom: 0; */
+    /* right: 0; */
+}
+.selected2 {
+    --w: 150px;
+    margin: 0;
+    border-color: green;
+    background: #080;
+    width: var(--w);
+    height: var(--w);
+    position: absolute;
+    line-height: var(--w);
+}
+
+/* .selected label {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    font-size: 14px;
+    vertical-align: top;
+} */
+
+/* .selected input {
+    text-align: left;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 50%;
+} */
+
+.redspan {
+    background: #800;
+    color: #fff;
+}
+
+input {
+    width: 6rem;
+    margin-bottom: 10px;
+}
+
+.img-wrp {
+    margin-top: 0px;
+    float: right;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 0 3px 3px hsla(0, 100%, 100%, 0.5);
+}
+
+.img-wrp img {
+    width: 100%;
+    height: auto;
+}
+
+#tp button {
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: #080;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.btn {
+    float: right;
+    margin-top: -60px;
+    background: #080;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 100;
+}
+
+.btn-2 {
+    margin-top: 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Window</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/modal.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Модальное окно</h2>
+        <div><a class="link" href="#openModal" >Открыть модальное окно</a></div>
+        <h3>Как это работает:</h3>
+        <p>При клике по ссылке с href="#" в окне браузера к адресной строке 
+            добавится  <a href="#" class="link"> # </a>
+        </p>
+        <p>При клике по ссылке с href="#name" в окне браузера к адресной 
+            строке добавится <a href="#name" class="link"> #name </a>
+        </p>
+        <h4>якорь #id</h4>
+        <p></p>
+        <p id="paragraph1" class="paragraph1">У этого абаза id="paragraph1"</p>
+        <p id="paragraph2" class="paragraph2">У этого абаза id="paragraph2"</p>
+        <p id="paragraph3" class="paragraph3">У этого абаза id="paragraph3"</p>
+        <h4>selector:target</h4>
+        <p>Используя клик по ссылке с href="id" мы можем включить работу CSS правил для любого селектора с псевдоклассом <mark>:target</mark></p>
+        <p>Также после клика произойдет переход внутри страницы - элемент с якорем (#id) окажется вверху страницы, если это возможно. </p>
+        <ul>
+            <li><a href="#paragraph1">У этой ссылки href="#paragraph1"</a></li>
+            <li><a href="#paragraph2">У этой ссылки href="#paragraph2"</a></li>
+            <li><a href="#paragraph3">У этой ссылки href="#paragraph3"</a></li>
+        </ul>
+        <h4>CSS</h4>
+        <pre><kbd>.paragraph1:target,
+.paragraph2:target,
+.paragraph3:target {
+    color: orange;
+}
+        </kbd></pre>
+        <h4>Шаги создания модального окна:</h4>
+        <ol>
+            <li>создаем обертку с <kbd>position: fixed</kbd> на ширину/высоту окна браузера с темным фоном</li>
+            <li>внутри и по центру обертки помещаем div с контентом и ссылку <pre><kbd>&lt;a href="#" title="Закрыть" class="close"&gt;X&lt;/a&gt;</kbd></pre></li>
+            <li>размещаем <kbd>.close</kbd> с помощью <kbd> position: absolute;</kbd>
+            </li>
+        </ol>
+    </div>
+    <a href="./slide7.html" class="next">next</a>
+    <a href="./slide5.html" class="back">back</a>
+    <div class="modalDialog" id="openModal">
+        <div class="modal">
+            <h4>Модальное окно на чистом CSS</h4>
+            <p>Используется для форм регистрации, вывода сообщений и т.п.</p>
+            <!-- <div class="btns">
+                <button>Да</button>
+                <button>Нет</button>
+            </div> -->
+            <a href="#" title="Закрыть" class="close">X</a>
+        </div>
+    </div>
+</body>
+
+</html>

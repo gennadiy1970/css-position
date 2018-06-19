@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Absolute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/abs.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Absolute</h2>
+        <h4>position: absolute</h4>
+        <h5>элементы с <kbd>position: absolute</kbd> выделены <span class="redspan">&nbsp;&nbsp; красным фоном &nbsp;&nbsp;</span> </h5>
+        <p>Для всех значений position кроме значения по умолчанию (static) действуют правила смещения.</p>
+        <p>Границы элемента в потоке <span class="upper">не сохраняются</span>. Элемент приподнимается над потоком и может перемещаться с помощью свойств.</p>
+        <p>Элементы имеют margin, но margin-collaps не действует</p>
+        <h4>Начало отсчета</h4>
+        <div class="img-wrp">
+            <h5>Направление</h5>
+            <img src="../image/rel.png" alt="direction">
+        </div>
+        <ol>
+            <li>если не заданы <kbd>top</kbd>, <kbd>right</kbd>, <kbd>bottom</kbd> или <kbd>left</kbd>, то элементы занимают верхний левый угол контентной области родителя.</li>
+            <li>от <span class="upper">сторон</span> ближайшего предка с <kbd>position</kbd> <span class="redspan">отличным</span> от <kbd>static</kbd></li>
+            <li>если таких предков нет, то отсчет ведется от <kbd>body</kbd></li>
+        </ol>
+        <form action="#">
+                <pre id="tp" class="tp"><kbd>
+top:    <input type="number" data-position="top">
+right:  <input type="number" data-position="right">  <button type="reset">RESET</button> 
+left:   <input type="number" data-position="left">             
+bottom: <input type="number" data-position="bottom">  
+                </kbd> </pre>
+        </form>
+        <p>Блоки со свойством <kbd>absolute</kbd>. Для блока с красным фоном можно задать <kbd>top</kbd>, <kbd>right</kbd>, <kbd>bottom</kbd> или <kbd>left</kbd>.
+        Но для блока с зеленым фоном этого нельзя сделать.</p>
+        <div class="box-wrapper box0 btn-wrp"> <button class="btn">static</button>
+            <div class="box-wrapper box1"> <button class="btn">static</button>
+                <div class="box2"> <button class="btn btn-2">static</button>
+                    <div class="selected"> 
+                        <h6>absolute</h6>
+                    </div>
+                    <div class="selected2"> 
+                            <h6>absolute</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <a href="./slide3.html" class="next">next</a>
+    <a href="./slide1.html" class="back">back</a>
+    <script src="../js/abs.js"></script>
+</body>
+</html>

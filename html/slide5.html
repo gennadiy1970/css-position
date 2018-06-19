@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>z-index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/z-index.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <h2>z-index</h2>
+        <p>Изменяет положение элемента по оси Z</p>
+        <h4>Ось Z - линия перпендикулярная экрану</h4>
+        <img src="../image/z-baze.png" alt="z-axis baze" width="400">
+        <h4>Ось Z - значение по умолчанию равно 0</h4>
+        <img src="../image/z-default.png" alt="z-axis baze" width="400">
+        <h4>Ось Z - допустимы отрицательные значения</h4>
+        <img src="../image/z-negative.png" alt="z-axis baze" width="400">
+        <h4>Z-index</h4>
+        <div class="set-z">
+            <button class="for0" data-zb="box0" data-add="10">+10</button><button class="for0" data-zb="box0" data-add="-10">-10</button> <span class="mr30">&nbsp;</span>
+            <button class="for1" data-zb="box1" data-add="10">+10</button><button class="for1" data-zb="box1" data-add="-10">-10</button> <span class="mr30">&nbsp;</span>
+            <button class="for2" data-zb="box2" data-add="10">+10</button><button class="for2" data-zb="box2" data-add="-10">-10</button>
+        </div>
+        <div class="z-wrapper">
+            <div class="box0">0</div>
+            <div class="box1">0</div>
+            <div class="box2">0</div>
+        </div>
+        <h4>Контекст Z-index </h4>
+        <p>Новый контекст образуется при наличии у предков элемента с <kbd>position</kbd>, отличным от <kbd>static</kbd> таких свойств, как:</p>
+        <ul>
+            <li>элементы <span class="upper green">соседи</span> с <kbd>position: absolute</kbd> <span class="green">реагируют</span> на <kbd>z-index</kbd> </li>
+            <li>элементы <span class="upper orangered">потомки</span> с <kbd>position: absolute</kbd> <span class="orangered">не реагируют</span> на <kbd>z-index</kbd> </li>
+            <li><kbd>opacity</kbd> со значением, меньше <kbd>1</kbd></li>
+            <li><kbd>opacity</kbd> со значением, меньше <kbd>1</kbd></li>
+            <li><kbd>filter </kbd> со значением, отличным от <kbd>none</kbd></li>
+            <!-- <li><kbd>transform </kbd> со значением, отличным от <kbd>none</kbd></li> -->
+            <!-- <li>flex элемент с <kbd>z-index</kbd> со значением, отличным от <kbd>auto</kbd></li> -->
+        </ul>
+
+        <h4>Z-index</h4>
+        <div class="set-zcontext">
+            <button class="context-for0" data-zb="cbox0" data-add="10">+10</button><button class="context-for0" data-zb="cbox0" data-add="-10">-10</button> <span class="mr30">&nbsp;</span>
+            <button class="context-for1" data-zb="cbox1" data-add="10">+10</button><button class="context-for1" data-zb="cbox1" data-add="-10">-10</button> <span class="mr30">&nbsp;</span>
+            <button class="context-for2" data-zb="cbox2" data-add="10">+10</button><button class="context-for2" data-zb="cbox2" data-add="-10">-10</button>
+        </div>
+        <div class="z-wrapper z-wrapper2">
+            <div class="cbox0">0</div> 
+            <div class="semi semi1" data-op="1"> 
+                <button class="btn half-opacity">opaciti: 1</button>
+                <button class="btn rel">static</button>
+                <div class="cbox1">0</div>
+                <div class="semi semi2" data-op="1"> 
+                    <button class="btn half-opacity">opaciti: 1</button>
+                    <button class="btn rel">static</button>
+                    <div class="cbox2">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="./slide6.html" class="next">next</a>
+    <a href="./slide4.html" class="back">back</a>
+    <script src="../js/z-index.js"></script>
+</body>
+</html>

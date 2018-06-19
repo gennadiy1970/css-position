@@ -1,0 +1,37 @@
+.gallery {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: num;
+}
+
+.image-wrp {
+    width: 30%;
+    margin-bottom: 20px;
+    position: relative;
+    counter-increment: num;
+}
+
+img {
+    box-shadow: 0px 0px 2px 2px hsla(0, 0%, 0%, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+.image-wrp:before {
+  --w: 50px;
+  content: counter(num);
+  position: absolute;
+  display: block;
+  width: var(--w);
+  height: var(--w);
+  border-radius: 50%;
+  text-align: center;
+  line-height: var(--w);
+  left: 25px;
+  top: 25px;
+  background: hsla(0, 0%, 50%, 0.8);
+  color: #fff;
+}

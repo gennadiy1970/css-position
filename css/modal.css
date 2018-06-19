@@ -1,0 +1,68 @@
+.modalDialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: hsla(0,0%,0%, 0.8);
+    cursor: pointer;
+    display: none;
+    /* pointer-events: none; */
+    /* z-index: 100; */
+}
+
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog  .modal {
+    width: 450px;
+    height: 280px;
+    padding: 55px;
+    border-radius: 9px;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(0,0%,0%, 0.5);
+    cursor: auto;
+    display: block;
+    z-index: 150;
+}
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: -7px;
+    cursor: pointer;
+    background: #333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.close:hover { 
+    transform: scale(1.1) 
+}
+
+a {
+    color: #fff;
+    pointer-events: auto;
+}
+
+.link {
+    text-decoration: underline;
+    color: red;
+}
+
+.paragraph1:target,
+.paragraph2:target,
+.paragraph3:target  {
+    color: orange;
+}

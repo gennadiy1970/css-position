@@ -1,0 +1,119 @@
+.wrapper {
+    padding-bottom: 50px;
+}
+
+.z-wrapper {
+    height: 200px;
+    border: 4px solid #fff;
+    /* background: hsla(0, 100%, 100%, 0.8); */
+    position: relative;
+}
+
+.semi {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    /* opacity: 0.5; */
+    background: hsla(0, 100%, 100%, 0.5);
+    /* position: relative; */
+}
+
+.cbox0, .cbox1, .cbox2,
+.box0, .box1, .box2 {
+    position: absolute;
+    width: 200px;
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+    top: 20px;
+    left: 0;
+    /* box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, .2); */
+}
+
+.box0,
+.cbox0 {
+    background: #066;
+    left: 20px;
+}
+
+.box1, 
+.cbox1 {
+    background: #770;
+    left: 140px;
+}
+
+.box2,
+.cbox2 {
+    background: #707;
+    left: 260px;
+}
+
+.context-for0,
+.for0 {
+    background: #077;
+}
+
+.context-for1,
+.for1 {
+    background: #770;
+}
+
+.context-for2,
+.for2 {
+    background: #707;
+}
+
+.mr30 {
+    padding-right: 30px;
+}
+
+.set-z,
+.set-zcontext {
+    text-align: center;
+}
+
+.z-wrapper2 {
+    height: 300px;
+    width: 768px;
+}
+
+.semi1 {
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 0;
+  height: 250px;
+  border: 1px solid transparent;
+}
+
+.semi2 {
+    border: 1px solid transparent;
+    height: 180px;
+    margin-top: 60px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.green {
+    background: #080;
+}
+
+.orangered {
+    background: orangered;
+}
+
+.btn {
+    background: #080;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 9px;
+    margin-right: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+    float: right;
+}
+/* 
+.half-opacity {
+
+} */

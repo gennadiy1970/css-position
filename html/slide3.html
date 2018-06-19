@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fixed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/fixed.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <h2>fixed</h2>
+        <h4>position: fixed</h4>
+        <p>Аналог <kbd>position: absolute</kbd>.
+        Отличие в том, что у <kbd>fixed</kbd> есть только один предок, 
+        относительно которого можно размещать элемент - это <kbd>viewport</kbd>.
+    </p>
+    <p>Скролл окна браузера не может изменить положение элемента <kbd>fixed</kbd></p>
+    <p>При выводе страницы на печать элемент <kbd>fixed</kbd> будет распечатан на каждом листе страницы документа.</p>
+    <form action="#">
+            <pre id="tp" class="tp"><kbd>
+top:    <input type="number" data-position="top">
+right:  <input type="number" data-position="right">  <button type="reset">RESET</button> 
+left:   <input type="number" data-position="left">             
+bottom: <input type="number" data-position="bottom">  
+            </kbd> </pre>
+    </form>
+
+    <div class="selected"> 
+            <h6>fixed</h6>
+    </div>
+
+    </div>
+    <a href="./slide4.html" class="next">next</a>
+    <a href="./slide2.html" class="back">back</a>
+    <script src="../js/fix.js"></script>
+</body>
+</html>
