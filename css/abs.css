@@ -142,3 +142,9 @@ input {
 .btn-2 {
     margin-top: 20px;
 }
+
+.btns-width {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+}

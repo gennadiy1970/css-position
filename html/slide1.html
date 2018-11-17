@@ -1,80 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Relative</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/relative.css">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/relative.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <h2>Relative</h2>
-        <h4>Нормальный поток выполнения</h4>
-        <pre><kbd>&lt;div class="bow-wrapper"&gt;
+      <h2>Relative</h2>
+      <p>
+        Relative не задан - элементы в потоке, т.е. отображаются по порядку
+        выполнения кода.
+      </p>
+      <pre><kbd>&lt;div class="bow-wrapper"&gt;
     &lt;div class="box"&gt;1&lt;/div&gt;
     &lt;div class="box"&gt;2&lt;/div&gt;
     &lt;div class="box"&gt;3&lt;/div&gt;
     &lt;div class="box"&gt;4&lt;/div&gt;
 &lt;/div&gt;        </kbd></pre>
-        <div class="bow-wrapper">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-        </div>
-        <h4>position: relative</h4>
-        <h5>элементы с <kbd>position: relative</kbd> выделены <span class="redspan">&nbsp;&nbsp; красным фоном &nbsp;&nbsp;</span> </h5>
-        <p>Для всех значений position кроме значения по умолчанию (static) действуют правила смещения.</p>
-        <p>Границы элемента в потоке <span class="upper">сохраняются</span>, но сам элемент приподнимается над потоком и может перемещаться с помощью свойств: </p>
-        <div class="img-wrp">
-            <h5>Начало отсчета и направление</h5>
-            <img src="../image/rel.png" alt="direction">
-        </div>
-        <form action="#">
+      <div class="bow-wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+      <h4>position: relative</h4>
+      <p>
+        Границы элемента в потоке <span class="upper">сохраняются</span>, но сам
+        элемент приподнимается над потоком и может перемещаться с помощью
+        свойств: <i>top</i>, <i>right</i>, <i>bottom</i> и <i>left</i>
+      </p>
+      <div class="img-wrp">
+        <h5>Начало отсчета и направление</h5>
+        <img src="../image/rel.png" alt="direction" />
+      </div>
+      <form action="#">
         <pre id="tp" class="tp"><kbd>
-            top:    <input type="number" data-position="top">
-            right:  <input type="number" data-position="right">  <button type="reset">RESET</button> 
-            left:   <input type="number" data-position="left">             
-            bottom: <input type="number" data-position="bottom">  
-               
-        </kbd> </pre>
-        </form>
-        <div class="bow-wrapper">
-            <div class="box">1</div>
-            <div class="box selected">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-        </div>
-        <h4>Приоритеты</h4> 
-        <h5><span class="green">Left</span> над <span class="orangered">Right</span> </h5>
-        <h5><span class="green">Top</span> над <span class="orangered">Bottom</span> </h5>
-        <p>Если заданы одновременно <kbd>left</kbd> и <kbd>right</kbd>, <br>
-            то приоритет имеет <span class="green">left</span>. Это выражается в том, что для <span class="orangered">right</span> присваивается значение <kbd>-left</kbd></p>
-        <p>Если заданы одновременно <kbd>top</kbd> и <kbd>bottom</kbd>, <br>
-            то приоритет имеет <span class="green">top</span>. Это выражается в том, что для <span class="orangered">bottom</span> присваивается значение <kbd>-top</kbd></p>
-        <h4>Обнуление</h4>
-        <p>Для того, чтобы пары <kbd>left</kbd> и <kbd>right</kbd> или <kbd>top</kbd> и <kbd>bottom</kbd> получили начальные значения, необходимо присвоить:</p>
-        <ul>
-            <li>для <span class="green">top</span>  <kbd>0</kbd>, <kbd>initial</kbd> или <kbd>unset</kbd></li>
-            <li>для <span class="orangered">right</span> только <kbd>initial</kbd> или <kbd>unset</kbd></li>
-            <li>для <span class="orangered">bottom</span> только <kbd>initial</kbd> или <kbd>unset</kbd></li>
-            <li>для <span class="green">left</span> <kbd>0</kbd>, <kbd>initial</kbd> или <kbd>unset</kbd></li>
-        </ul>
-        <h4>Перекрытие</h4>
-        <p>Если два соседних элемента находтся в <kbd>position: relative</kbd>, то в случае перекрытия порядок наложения такой же как и порядок в потоке. Элемент, находящийся в потоке раньше, окажется ниже и будет перекрыт.</p>
-        <div class="bow-wrapper">
-                <div class="box relLeft selected">1</div>
-                <div class="box relRight selected">2</div>
-                <div class="box relRight2 selected">3</div>
-                <div class="box relRight3 selected">4</div>
-            </div>
+top:    <input type="number" data-position="top">
+right:  <input type="number" data-position="right">  <button type="reset">RESET</button>
+bottom: <input type="number" data-position="bottom">
+left:   <input type="number" data-position="left">
+                </kbd>
+            </pre>
+      </form>
+      <p>Элемент с position: relative выделен красным фоном</p>
+      <div class="bow-wrapper">
+        <div class="box">1</div>
+        <div class="box selected">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+      <h4>Приоритеты</h4>
+      <h5>
+        <span class="green">Left</span> над <span class="orangered">Right</span>
+      </h5>
+      <h5>
+        <span class="green">Top</span> над <span class="orangered">Bottom</span>
+      </h5>
+      <p>
+        Если заданы одновременно <kbd>left</kbd> и <kbd>right</kbd>, <br />
+        то приоритет имеет <span class="green">left</span>. Это выражается в
+        том, что для <span class="orangered">right</span> присваивается значение
+        <kbd>-left</kbd>
+      </p>
+      <p>
+        Если заданы одновременно <kbd>top</kbd> и <kbd>bottom</kbd>, <br />
+        то приоритет имеет <span class="green">top</span>. Это выражается в том,
+        что для <span class="orangered">bottom</span> присваивается значение
+        <kbd>-top</kbd>
+      </p>
+      <h4>Обнуление</h4>
+      <p>
+        Для того, чтобы пары <kbd>left</kbd> и <kbd>right</kbd> или
+        <kbd>top</kbd> и <kbd>bottom</kbd> получили начальные значения,
+        необходимо присвоить:
+      </p>
+      <ul>
+        <li>
+          для <span class="green">top</span> <kbd>0</kbd>,
+          <kbd>initial</kbd> или <kbd>unset</kbd>
+        </li>
+        <li>
+          для <span class="orangered">right</span> только <kbd>initial</kbd> или
+          <kbd>unset</kbd>
+        </li>
+        <li>
+          для <span class="orangered">bottom</span> только
+          <kbd>initial</kbd> или <kbd>unset</kbd>
+        </li>
+        <li>
+          для <span class="green">left</span> <kbd>0</kbd>,
+          <kbd>initial</kbd> или <kbd>unset</kbd>
+        </li>
+      </ul>
+      <h4>Перекрытие</h4>
+      <p>
+        Если два соседних элемента находтся в <kbd>position: relative</kbd>, то
+        в случае перекрытия порядок наложения такой же как и порядок в потоке.
+        Элемент, находящийся в потоке раньше, окажется ниже и будет перекрыт.
+      </p>
+      <div class="bow-wrapper">
+        <div class="box relLeft selected">1</div>
+        <div class="box relRight selected">2</div>
+        <div class="box relRight2 selected">3</div>
+        <div class="box relRight3 selected">4</div>
+      </div>
+      <h4>Z-index</h4>
+      <p>
+        Изменить порядок отображения в случае перекрытия можно с помощью
+        z-index.
+      </p>
+      <p>
+        По умолчанию у всех элементов z-index 0. Большее число - поднимает
+        элемент над другими элементами с меньшим числом z-index.
+      </p>
+      <p>Кликните по элементу и установите z-index</p>
+      <form>
+        <label><input type="number" name="num" id="num" /> <kbd>z-index</kbd> <label
+      </form>
+      <div class="bow-wrapper zIndex-wrp">
+        <div class="box  selected zIndex">1</div>
+        <div class="box  selected zIndex">2</div>
+        <div class="box  selected zIndex">3</div>
+        <div class="box  selected zIndex">4</div>
+      </div>
     </div>
     <a href="./slide2.html" class="next">next</a>
     <a href="../index.html" class="back">back</a>
-    <script src="../js/rel.js"></script>
-</body>
+    <script src="../js/z.js"></script>
+  </body>
 </html>

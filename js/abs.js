@@ -9,11 +9,13 @@ function changeClassBtn (ev) {
 
 const tp = document.getElementById('tp');
 const selected = document.querySelector('.selected');
+const btnsWidth = document.querySelector('.btns-width');
 const inputs = document.querySelectorAll('#tp input');
 const reset = document.querySelector('#tp button');
 
-tp.addEventListener('change', setPosition, false);
-reset.addEventListener('click', resetInputs, false);
+tp.addEventListener('change', setPosition);
+reset.addEventListener('click', resetInputs);
+btnsWidth.addEventListener('click', setWidth);
 
 
 function setPosition (e) {
@@ -26,3 +28,10 @@ function resetInputs () {
     })
 }
 
+function setWidth (e) {
+    
+    if (e.target.nodeName.toLowerCase() === 'button') {
+        console.log(e.target.dataset.width);
+        selected.style.width = e.target.dataset.width;
+    }
+}

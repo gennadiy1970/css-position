@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Relative</title>
+    <base target="_blank" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/examples.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/image.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h4>Основные примеры использования</h4>
+      <ul>
+        <li class="example-1">
+          <h2>выпадающее меню</h2>
+          <ul class="menu">
+            <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">goods ▼</a>
+              <ul class="submenu">
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link">smartphone</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link">tablet</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link">laptop</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">about</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">contact</a>
+            </li>
+          </ul>
+        </li>
+        <li class="example-1">
+          <h2>Текст над изображением</h2>
+          <div class="gallery">
+            <div class="image-wrp">
+              <img
+                src="../image/abstract-q-c-640-480-1.jpg"
+                alt="abstract image"
+              />
+            </div>
+            <div class="image-wrp">
+              <img
+                src="../image/abstract-q-c-640-480-2.jpg"
+                alt="abstract image"
+              />
+            </div>
+            <div class="image-wrp">
+              <img
+                src="../image/abstract-q-c-640-480-3.jpg"
+                alt="abstract image"
+              />
+            </div>
+          </div>
+        </li>
+        <li><a href="./slide6.html">Модальное окно</a></li>
+      </ul>
+    </div>
+    <a href="./slide1.html" class="next">next</a>
+    <a href="../index.html" class="back">back</a>
+    <script src="../js/rel.js"></script>
+  </body>
+</html>

@@ -105,3 +105,20 @@ h5 {
 .upper {
     text-transform: uppercase;
 }
+
+.zIndex:nth-of-type(1) {
+    background: #800;
+    left: 10px;
+}
+.zIndex:nth-of-type(2) {
+    background: #808;
+    right: 20px;
+}
+.zIndex:nth-of-type(3) {
+    background: #080;
+    right: 60px;
+}
+.zIndex:nth-of-type(4) {
+    background: #088;
+    right: 90px;
+}
