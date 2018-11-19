@@ -1,7 +1,6 @@
 const parent = document.querySelector(".zIndex-wrp");
 const divs = document.querySelectorAll(".zIndex");
 const num = document.querySelector("#num");
-// const sbt = document.querySelector("#sbt");
 
 parent.addEventListener("click", setElem);
 
